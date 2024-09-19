@@ -94,8 +94,27 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        //currently implementing
+        for (HashMap<String, String> job : allJobs) {
+
+
+            for (String key : job.keySet()) {
+                String aValue = job.get(key);
+
+                if(aValue.contains(value)){
+                    jobs.add(job);
+                }
+
+            }
+
+                //jobs.add(row);
+
+        }
+
         // TODO - implement this method
-        return null;
+        return jobs;
     }
 
     /**
